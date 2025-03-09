@@ -32,14 +32,13 @@
             $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // Assurez-vous que la variable $sujet est définie correctement
-            $sujet = "Sujet"; // Vous pouvez ajuster cette variable en fonction de vos besoins
+            $sujet = "Sujet";
 
             $stmt = $pdo->prepare("INSERT INTO question (reponse, correcte, type_question, intitule) VALUES (:reponse, null, :type_question, :intitule)");
             $stmt->execute([
-                'reponse' => $verbeCorrect,  // Correction ici
+                'reponse' => $verbeCorrect, 
                 'type_question' => "dictee",
-                'intitule' => "$sujet $verbeCorrect ..."  // Correction du titre de la question
+                'intitule' => "$sujet $verbeCorrect ..." 
             ]);
             
         } catch (PDOException $e) {

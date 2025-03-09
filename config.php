@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$dbname = 'projet_sae_maintenance_application';
-$username = 'root'; // Change selon ton serveur
-$password = ''; // Change selon ton serveur
+$dbname = 'nom_de_votre_base';
+$username = 'votre_nom_utilisateur';
+$password = 'votre_mot_de_passe';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);

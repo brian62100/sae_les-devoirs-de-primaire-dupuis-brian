@@ -22,32 +22,21 @@
 	$operation=0;
 	$reponse=0;
 
-	// Version difficile
-	//$nbGauche=mt_rand(2,9)*10+mt_rand(0,4);
 	$nbGauche=mt_rand(6000,10000);
-	// $nbDroite=mt_rand(1,$nbGauche);
-	//$nbDroite=mt_rand(5,9);
 	$nbDroite=mt_rand(100,6000);
 	$operation=$nbGauche.' - '.$nbDroite;
 	$reponse=$nbGauche-$nbDroite;
-	// Version facile
-	// $nbGauche=mt_rand(6,10);
-	// $nbDroite=mt_rand(1,$nbGauche);
-	// $operation=$nbGauche.' - '.$nbDroite;
-	// $reponse=$nbGauche-$nbDroite;
 
-	// Insert the question into the database
 	if ($type_utilisateur === 'eleve'): 4;
 		try {
 			$conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-			// Prepare the INSERT statement for adding the question to the database
 			$stmt = $conn->prepare("INSERT INTO question (reponse, correcte, type_question, intitule) VALUES (:reponse, NULL, :type_question, :intitule)");
 			$stmt->execute([
-				'reponse' => $reponse,           // The correct answer to the question
-				'type_question' => "soustraction",  // Type of the question (multiplication)
-				'intitule' => $operation        // The question itself (calculation)
+				'reponse' => $reponse, 
+				'type_question' => "soustraction", 
+				'intitule' => $operation     
 			]);
 
 		} catch (PDOException $e) {

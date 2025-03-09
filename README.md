@@ -1,24 +1,35 @@
-# les-devoirs-de-primaire
-Site permettant aux enfants en primaire de faire des exercices de maths/français et peut être plus par la suite
+# Les Devoirs de Primaire
 
-# installation :
-1 - Téléchargez le code
+**Description**  
+Ce projet est une plateforme web destinée aux élèves du primaire, leur permettant de réaliser des exercices en mathématiques et en français. Les parents et les professeurs peuvent suivre les progrès des élèves.
 
-2 - Transférez le sur un hébergement avec php (pas de base de données utilisée)
+## Structure du Projet
 
-3 - Après le transfert, dans les répertoires addition, conjugaison_phrase, conjugaison_verbe, dictee, multiplication et soustraction, changez les droits en 777 pour les sous-répertoires logs, resultats et supprime
+- **addition/** : Contient les exercices d'addition.
+- **conjugaison_phrase/** : Contient les exercices de conjugaison de phrases.
+- **conjugaison_verbe/** : Contient les exercices de conjugaison de verbes.
+- **dictee/** : Contient les exercices de dictée.
+- **images/** : Contient les ressources d'images utilisées dans le site.
+- **multiplication/** : Contient les exercices de multiplication.
+- **soustraction/** : Contient les exercices de soustraction.
+- **Login.php** : Page de connexion des utilisateurs.
+- **ajout_eleve.php** : Page permettant l'ajout d'un élève (réservée aux parents et professeurs).
+- **bdd.sql** : Fichier SQL pour la création de la base de données et des tables nécessaires.
+- **config.php** : Fichier de configuration pour la connexion à la base de données.
+- **header.php** : Fichier inclus en haut de chaque page pour le menu de navigation et les inclusions communes.
+- **index.php** : Page d'accueil du site.
+- **inscription.php** : Page d'inscription des nouveaux utilisateurs.
+- **logout.php** : Page permettant la déconnexion des utilisateurs.
+- **profil.php** : Page affichant le profil de l'utilisateur connecté.
+- **register.php** : Page de gestion de l'inscription des utilisateurs.
+- **saé-S6.A.1 (1).xlsx** : Fichier Excel lié au projet (peut contenir des spécifications ou des données).
 
-# TODO
-1 - Créer un système de connexion avec profil
+## Installation en Local
 
-2 - Améliorer le système de logs
+### 1. Pré-requis
+- Un serveur web local (comme XAMPP, WAMP ou Laragon) avec PHP installé.
+- MySQL ou MariaDB pour la gestion de la base de données.
 
-3 - Utiliser une base de données
-
-4 - Améliorer le système d'affichage des résultats (en fonction de l'utilisateur)
-
-5 - Ajouter la possibilités de configurer les exercices
-
-6 - Création d'une application (back office ?) pour faire du text-to-speech
-
-7 - Documentation complète du projet
+### 2. Cloner le dépôt
+```bash
+git clone https://github.com/brian62100/sae_les-devoirs-de-primaire-dupuis-brian.git

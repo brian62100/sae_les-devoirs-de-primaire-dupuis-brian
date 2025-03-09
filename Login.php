@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user && !empty($user['password']) && password_verify($mdp, $user['password'])) {
-            $_SESSION['user_id'] = $user['user_id'];  // Assurez-vous que l'ID est bien stocké
+            $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['connected'] = true;
             $_SESSION['nom'] = $user['nom']; 
             $_SESSION['prenom'] = $user['prenom'];
